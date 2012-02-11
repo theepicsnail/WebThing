@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% if error %}
+{{ error }}
+</br>
+{% endif %}
+
+
+Register <br>
+<form method="POST">{% csrf_token %}
+username<input name="username"/><br>
+password<input name="password"/><br>
+email<input name="email"/>
+<input type="submit"/>
+</form>
+
+
+<a href="/" />Back</a>
+
+{% endblock content %}
+
+
+
+
+
+
+

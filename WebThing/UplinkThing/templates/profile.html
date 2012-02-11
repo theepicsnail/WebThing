@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+var user= "{{ username }}";
+
+
+function update(){
+    $.get("/ajax", function(data){
+        
+        $("#out").html(data);
+    });
+}
+
+function init(){setInterval("update()",1000);}
+
+
+init();
+</script>
+{% endblock head %}
+
+
+{% block content %}
+Username: {{ username }}
+<span id="out"></span>
+<br>
+<a href="/logout">logout</a>
+{% endblock content %}
+
+
+
+

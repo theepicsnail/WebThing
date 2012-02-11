@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>{% block title %}Title{% endblock title %}</title>
+
+    <link rel=StyleSheet HREF="/static/base.css">
+
+    {% block head %}{% endblock head %}
+</head>
+<body id="body">
+<div id="main">
+    {% block main %}
+
+    <div id="header">{% block header %}Header{% endblock header %}</div>
+
+    <div id="menu">
+        {% block menu %}
+            Menu title
+            <ul>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            <li>Menu item</li>
+            </ul>
+        {% endblock menu %}
+    </div>
+
+    <div id="content">
+        {% block error %}{% if error %}Error: {{ error }}</br>{% endif %}{% endblock error %}
+        {% block content %}Content{% endblock content %}
+    </div>
+
+    <div id="footer">
+        {% block footer %}
+        This footer was brought to you by: snail!
+        {% endblock footer %}
+    </div>
+
+    {% endblock main %}
+</div>
+</body>
+</html>

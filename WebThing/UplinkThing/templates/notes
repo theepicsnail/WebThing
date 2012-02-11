@@ -1,0 +1,24 @@
+blocks
+    title
+    head
+    main
+    header
+    menu
+    error
+    content
+    footer
+
+base
+    title
+    header
+    menu
+    error
+    footer
+
+index:base
+    content
+
+register:base
+    content
+
+
