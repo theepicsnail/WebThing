@@ -20,6 +20,10 @@ urlpatterns = patterns('',
     url(r'^login',      login),
     url(r'^register',   register),
     url(r'^index',      index),
+    url(r'^profile$',   profileLookup),
     url(r'^profile/(?P<name>.*)$',profile),
+    url(r'^computer/(?P<cid>.*)/(?P<action>.*)$',   computer),
+    url(r'^upgrade$',   upgrade),
+    url(r'^terminal$',  terminal),
     url(r'^$',          index)
 )
